@@ -1,1 +1,34 @@
-$c-gray: #eee;
+$color-background-primary: #2c2c2c;
+$color-background-secondary: #f2f6fa;
+$color-background-light: #fff;
+$color-text-light: #fff;
+$color-text-title: #253757;
+$color-text-primary: #6c788b;
+$color-btn-primary: #2060f6;
+$color-btn-primary-hover: #144ed4;
+
+.blue-version {
+  $color-background-primary: #008aff;
+  $color-background-secondary: #f2f9ff;
+  $color-background-light: #fff;
+  $color-text-light: #fff;
+  $color-text-title: #253757;
+  $color-text-primary: #6c788b;
+  $color-btn-primary: #ff9c8e;
+  $color-btn-primary-hover: #ff7e6c;
+}
+
+// Fonts
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+:root {
+  --background-primary: $color-background-primary;
+  --background-secondary: $color-background-secondary;
+  --background-light: $color-background-light;
+  --text-light: $color-text-light;
+  --text-title: $color-text-title;
+  --text-primary: $color-text-primary;
+  --btn-primary: $color-btn-primary;
+  --btn-primary-hover: $color-btn-primary-hover;
+}

@@ -1,4 +1,12 @@
 %h1 {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
+  font-family: $font-primary;
+  font-weight: 600;
+  line-height: 68px;
+  letter-spacing: -2px;
+  font-size: 64px;
+
+  @include on-mobile {
+    font-size: 52px;
+    line-height: 120%;
+  }
 }

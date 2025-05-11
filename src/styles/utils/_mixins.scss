@@ -36,6 +36,12 @@
   }
 }
 
+@mixin only-mobiles {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
 // #endregion
 
 // #region Grid Layout
@@ -43,24 +49,24 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-inline: 20px;
-  gap: 20px;
+  column-gap: 20px;
 
   @include on-tablet {
     grid-template-columns: repeat(6, 68px);
     padding-inline: 40px;
-    gap: 30px;
+    column-gap: 30px;
   }
 
   @include on-desktop-small {
     grid-template-columns: repeat(12, 58px);
     padding-inline: 54px;
-    gap: 20px;
+    column-gap: 20px;
   }
 
   @include on-desktop {
     grid-template-columns: repeat(12, 68px);
     padding-inline: 227px;
-    gap: 30px;
+    column-gap: 30px;
   }
 
   @include on-desktop-wide {

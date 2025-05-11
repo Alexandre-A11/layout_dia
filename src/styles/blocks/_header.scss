@@ -1,0 +1,62 @@
+.header {
+  @include grid-layout;
+
+  display: flex;
+  background-color: $color-background-primary;
+  align-items: center;
+  padding-top: 20px;
+  column-gap: 0;
+
+  @include on-desktop-small {
+    padding-top: 48px;
+  }
+
+  &__logo {
+    width: 46px;
+    height: 28px;
+
+    background-image: url('../images/logo/air-logo.svg');
+    background-size: contain;
+    margin-right: 32px;
+
+    transition: transform $transition-time ease-in-out;
+
+    @include on-desktop-small {
+      margin-right: 136px;
+    }
+
+    @include on-desktop {
+      margin-right: 251px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__hire-us {
+    @extend %menu-text;
+
+    text-decoration: none;
+
+    margin-left: auto;
+    position: relative;
+
+    transition: color $transition-time;
+
+    &:hover {
+      color: $color-btn-primary;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      height: 2px;
+      border-radius: 4px;
+      margin-top: 8px;
+      background-color: $color-btn-primary;
+    }
+  }
+}

@@ -1,34 +1,51 @@
-$color-background-primary: #2c2c2c;
-$color-background-secondary: #f2f6fa;
-$color-background-light: #fff;
-$color-text-light: #fff;
-$color-text-title: #253757;
-$color-text-primary: #6c788b;
-$color-btn-primary: #2060f6;
-$color-btn-primary-hover: #144ed4;
-
-.blue-version {
-  $color-background-primary: #008aff;
-  $color-background-secondary: #f2f9ff;
-  $color-background-light: #fff;
-  $color-text-light: #fff;
-  $color-text-title: #253757;
-  $color-text-primary: #6c788b;
-  $color-btn-primary: #ff9c8e;
-  $color-btn-primary-hover: #ff7e6c;
-}
-
 // Fonts
 $font-primary: 'Poppins', sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
 
+// Black Version
+$color-jet: #2c2c2c;
+$color-anti-flash-white: #f2f6fa;
+$color-royal-blue: #2060f6;
+$color-byzantine-blue: #144ed4;
+
+// Blue Version
+$color-dodger-blue: #008aff;
+$color-alice-blue: #f2f9ff;
+$color-coral-pink: #ff9c8e;
+$color-salmon: #ff7e6c;
+
+// Colors shared
+$color-white: #fff;
+$color-delft-blue: #253757;
+$color-slate-gray: #6c788b;
+
 :root {
-  --background-primary: $color-background-primary;
-  --background-secondary: $color-background-secondary;
-  --background-light: $color-background-light;
-  --text-light: $color-text-light;
-  --text-title: $color-text-title;
-  --text-primary: $color-text-primary;
-  --btn-primary: $color-btn-primary;
-  --btn-primary-hover: $color-btn-primary-hover;
+  --background-primary: #{$color-jet};
+  --background-secondary: #{$color-anti-flash-white};
+  --background-light: #{$color-white};
+  --text-light: #{$color-white};
+  --text-title: #{$color-delft-blue};
+  --text-primary: #{$color-slate-gray};
+  --btn-primary: #{$color-royal-blue};
+  --btn-primary-hover: #{$color-byzantine-blue};
 }
+
+.blue-version {
+  --background-primary: #{$color-dodger-blue};
+  --background-secondary: #{$color-alice-blue};
+  --btn-primary: #{$color-coral-pink};
+  --btn-primary-hover: #{$color-salmon};
+}
+
+$color-background-primary: var(--background-primary);
+$color-background-secondary: var(--background-secondary);
+$color-background-light: var(--background-light);
+$color-text-light: var(--text-light);
+$color-text-title: var(--text-title);
+$color-text-primary: var(--text-primary);
+$color-btn-primary: var(--btn-primary);
+$color-btn-primary-hover: var(--btn-primary-hover);
+
+// Transition
+$transition-time: 0.3s;
+$transition-time--menu: 0.5s;

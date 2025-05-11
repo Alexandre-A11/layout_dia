@@ -1,7 +1,12 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import 'blocks';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: $color-background-secondary;
+  margin: 0;
 }

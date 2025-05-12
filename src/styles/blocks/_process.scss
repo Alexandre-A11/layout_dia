@@ -180,6 +180,21 @@
     margin: 0 0 32px;
   }
 
+  &__btn-text {
+    position: absolute;
+    left: 100%;
+
+    margin-left: 16px;
+
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $color-indigo-dye;
+
+    white-space: nowrap;
+  }
+
   &__btn {
     width: 40px;
     height: 40px;
@@ -199,29 +214,6 @@
 
     transition: background-color $transition-time ease;
 
-    &:hover {
-      background-color: $color-btn-primary-hover;
-
-      .card__btn-text {
-        color: $color-btn-primary-hover;
-      }
-    }
-
-    &__btn-text {
-      position: absolute;
-      left: 100%;
-
-      margin-left: 16px;
-
-      font-family: $font-primary;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 100%;
-      color: $color-indigo-dye;
-
-      white-space: nowrap;
-    }
-
     &::after {
       content: '';
       width: 24px;
@@ -231,6 +223,14 @@
 
       background-image: url('../images/icons/arrow.png');
       background-size: contain;
+    }
+
+    &:hover {
+      background-color: $color-btn-primary-hover;
+
+      .card__btn-text {
+        color: $color-btn-primary-hover;
+      }
     }
   }
 }

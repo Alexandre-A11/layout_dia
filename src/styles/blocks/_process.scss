@@ -1,0 +1,236 @@
+.process {
+  @include grid-layout;
+  @include padding-layout;
+
+  padding-block: 120px;
+
+  @include on-tablet {
+    padding-block: 148px 280px;
+  }
+
+  &__main {
+    grid-column: 1 / -1;
+
+    margin: 0 0 48px;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+      margin: 0 0 56px;
+    }
+
+    @include on-desktop-sm {
+      grid-column: 1 / 5;
+
+      transform: translateY(103px);
+    }
+  }
+
+  &__place {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $color-french-gray;
+
+    margin: 0 0 16px;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: $color-text-title;
+
+    margin: 0 0 24px;
+  }
+
+  &__text {
+    @extend %text-comment;
+
+    margin: 0;
+
+    @include on-tablet {
+      width: 263px;
+    }
+
+    @include on-desktop-sm {
+      width: 292px;
+    }
+
+    @include on-desktop {
+      width: 362px;
+    }
+  }
+}
+
+.card {
+  grid-column: 1 / -1;
+  width: 280px;
+  height: 264px;
+
+  padding: 32px;
+  box-sizing: border-box;
+
+  background-color: $color-background-light;
+
+  border-radius: 16px;
+
+  box-shadow: 0 9 18 0 rgba(37, 41, 49, 0.03);
+
+  margin-bottom: 24px;
+
+  @include on-tablet {
+    width: 264px;
+    height: 264px;
+  }
+
+  @include on-desktop-sm {
+    width: 214px;
+    height: 264px;
+  }
+
+  @include on-desktop {
+    width: 264px;
+    height: 264px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--001 {
+    @include on-tablet {
+      grid-column: 1 / 4;
+      grid-row: 2;
+    }
+
+    @include on-desktop-sm {
+      grid-column: 7 / 10;
+      grid-row: 1;
+      transform: translateY(139px);
+    }
+  }
+
+  &--002 {
+    @include on-tablet {
+      grid-column: 4 / -1;
+      grid-row: 1;
+
+      transform: translateY(232px);
+    }
+
+    @include on-desktop-sm {
+      grid-column: 10 / -1;
+
+      transform: translateY(0);
+    }
+  }
+
+  &--003 {
+    @include on-desktop-sm {
+      grid-column: 7 / 10;
+      grid-row: 2;
+      transform: translateY(130px);
+    }
+  }
+
+  &--004 {
+    @include on-tablet {
+      grid-column: 4 / -1;
+      grid-row: 2;
+      transform: translateY(160px);
+    }
+
+    @include on-desktop-sm {
+      grid-column: 10 / -1;
+      grid-row: 2;
+      transform: translateY(0);
+    }
+  }
+
+  &__number {
+    font-family: $font-primary;
+    font-weight: 600;
+    font-style: 13px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $color-btn-primary;
+
+    width: 46px;
+    height: 24px;
+    background-color: #e9f0ff;
+    border-radius: 24px;
+
+    text-align: center;
+    align-content: center;
+
+    margin: 0 0 24px;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    color: $color-text-primary;
+
+    margin: 0 0 32px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: $color-btn-primary;
+    color: $color-text-light;
+    text-decoration: none;
+
+    font-size: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition: background-color $transition-time ease;
+
+    &:hover {
+      background-color: $color-btn-primary-hover;
+
+      .card__btn-text {
+        color: $color-btn-primary-hover;
+      }
+    }
+
+    &__btn-text {
+      position: absolute;
+      left: 100%;
+
+      margin-left: 16px;
+
+      font-family: $font-primary;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: $color-indigo-dye;
+
+      white-space: nowrap;
+    }
+
+    &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+
+      display: block;
+
+      background-image: url('../images/icons/arrow.png');
+      background-size: contain;
+    }
+  }
+}

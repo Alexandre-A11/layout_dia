@@ -18,7 +18,7 @@
   }
 }
 
-@mixin on-desktop-small {
+@mixin on-desktop-sm {
   @media (min-width: 1024px) {
     @content;
   }
@@ -30,7 +30,7 @@
   }
 }
 
-@mixin on-desktop-wide {
+@mixin on-desktop-xl {
   @media (min-width: 2560px) {
     @content;
   }
@@ -48,29 +48,47 @@
 @mixin grid-layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-inline: 20px;
   column-gap: 20px;
 
   @include on-tablet {
     grid-template-columns: repeat(6, 68px);
-    padding-inline: 40px;
     column-gap: 30px;
   }
 
-  @include on-desktop-small {
+  @include on-desktop-sm {
     grid-template-columns: repeat(12, 58px);
-    padding-inline: 54px;
     column-gap: 20px;
   }
 
   @include on-desktop {
     grid-template-columns: repeat(12, 68px);
-    padding-inline: 227px;
     column-gap: 30px;
   }
 
-  @include on-desktop-wide {
+  @include on-desktop-xl {
     grid-template-columns: repeat(12, 68px);
+  }
+}
+
+// #endregion
+
+// #region Padding-Inline
+@mixin padding-layout {
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 40px;
+  }
+
+  @include on-desktop-sm {
+    padding-inline: 54px;
+  }
+
+  @include on-desktop {
+    padding-inline: 227px;
+  }
+
+  @include on-desktop-xl {
     padding-inline: 707px;
   }
 }

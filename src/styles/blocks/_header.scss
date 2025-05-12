@@ -1,5 +1,6 @@
 .header {
   @include grid-layout;
+  @include padding-layout;
 
   display: flex;
   background-color: $color-background-primary;
@@ -7,7 +8,7 @@
   padding-top: 20px;
   column-gap: 0;
 
-  @include on-desktop-small {
+  @include on-desktop-sm {
     padding-top: 48px;
   }
 
@@ -21,7 +22,7 @@
 
     transition: transform $transition-time ease-in-out;
 
-    @include on-desktop-small {
+    @include on-desktop-sm {
       margin-right: 136px;
     }
 

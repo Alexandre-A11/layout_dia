@@ -1,9 +1,9 @@
 %h1 {
   font-family: $font-primary;
   font-weight: 600;
+  font-size: 64px;
   line-height: 68px;
   letter-spacing: -2px;
-  font-size: 64px;
 
   @include on-mobile {
     font-size: 52px;

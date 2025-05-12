@@ -19,6 +19,10 @@ $color-white: #fff;
 $color-delft-blue: #253757;
 $color-slate-gray: #6c788b;
 
+// Transition
+$transition-time: 0.3s;
+$transition-time--menu: 0.5s;
+
 :root {
   --background-primary: #{$color-jet};
   --background-secondary: #{$color-anti-flash-white};
@@ -45,7 +49,3 @@ $color-text-title: var(--text-title);
 $color-text-primary: var(--text-primary);
 $color-btn-primary: var(--btn-primary);
 $color-btn-primary-hover: var(--btn-primary-hover);
-
-// Transition
-$transition-time: 0.3s;
-$transition-time--menu: 0.5s;

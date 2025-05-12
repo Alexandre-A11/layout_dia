@@ -14,7 +14,7 @@
       background-color: $color-btn-primary;
     }
 
-    @include on-desktop-small {
+    @include on-desktop-sm {
       display: none;
     }
 
@@ -86,7 +86,7 @@
     margin: 0 0 26px;
     list-style: none;
 
-    @include on-desktop-small {
+    @include on-desktop-sm {
       margin: 0 48px 0 0;
 
       &:last-child {

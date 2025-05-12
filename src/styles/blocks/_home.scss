@@ -100,7 +100,10 @@
   grid-column: 1 / -1;
   overflow: hidden;
   margin-inline: -20px;
-  background-color: $color-background-primary;
+  background-image: linear-gradient(
+    $color-background-primary 90%,
+    $color-background-secondary 10%
+  );
 
   @include on-tablet {
     margin-inline: -40px;

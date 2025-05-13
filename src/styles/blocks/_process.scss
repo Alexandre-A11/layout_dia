@@ -5,6 +5,10 @@
   padding-block: 120px;
 
   @include on-tablet {
+    padding-block: 148px;
+  }
+
+  @include on-desktop-sm {
     padding-block: 148px 280px;
   }
 
@@ -26,23 +30,13 @@
   }
 
   &__place {
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 100%;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: $color-french-gray;
+    @extend %text-place;
 
     margin: 0 0 16px;
   }
 
   &__title {
-    font-family: $font-primary;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 130%;
-    color: $color-text-title;
+    @extend %title;
 
     margin: 0 0 24px;
   }

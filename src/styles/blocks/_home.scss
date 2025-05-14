@@ -133,6 +133,10 @@
     margin-inline: 0 -227px;
   }
 
+  @media (min-width: 1080px) {
+    margin-inline: 0 -516px;
+  }
+
   @include on-desktop-xl {
     margin-inline: 0 -707px;
   }
@@ -155,12 +159,14 @@
 
     @include on-desktop {
       width: 687px;
-      height: 680px;
+    }
+
+    @media (min-width: 1080px) {
+      width: 1000px;
     }
 
     @include on-desktop-xl {
       width: 1167px;
-      height: 680px;
     }
   }
 

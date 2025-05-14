@@ -8,6 +8,10 @@
   padding-top: 20px;
   column-gap: 0;
 
+  transition:
+    background-color $transition-time ease-in-out,
+    color $transition-time ease-in-out;
+
   @include on-desktop-sm {
     padding-top: 48px;
   }
@@ -18,17 +22,8 @@
 
     background-image: url('../images/logo/air-logo.svg');
     background-size: contain;
-    margin-right: 32px;
 
     transition: transform $transition-time ease-in-out;
-
-    @include on-desktop-sm {
-      margin-right: 136px;
-    }
-
-    @include on-desktop {
-      margin-right: 251px;
-    }
 
     &:hover {
       transform: scale(1.05);
@@ -58,6 +53,47 @@
       border-radius: 4px;
       margin-top: 8px;
       background-color: $color-btn-primary;
+    }
+  }
+
+  &__theme-btn {
+    width: 48px;
+    height: 24px;
+
+    margin-inline: 8px 32px;
+    background: $color-background-secondary;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    @include on-mobile {
+      width: 40px;
+      height: 20px;
+
+      margin-inline: 14px 32px;
+    }
+
+    @include on-desktop-sm {
+      margin-right: 116px;
+    }
+
+    @include on-desktop {
+      margin-right: 251px;
+    }
+
+    &::after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      display: block;
+      background-color: $color-dodger-blue;
+      border-radius: 50%;
+    }
+
+    .blue-version &::after {
+      transform: translateX(100%);
+      background-color: $color-jet;
     }
   }
 }

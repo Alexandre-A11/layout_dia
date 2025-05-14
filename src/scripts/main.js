@@ -2,12 +2,32 @@
 
 const btnMenu = document.querySelector('.nav__menu-btn');
 const menuList = document.querySelector('.nav__menu-list');
+const menuLinks = document.querySelectorAll('.nav__menu-link');
 const btnPrev = document.querySelector('.slideshow__btn--prev');
 const btnNext = document.querySelector('.slideshow__btn--next');
+const themeSwitch = document.querySelector('.header__theme-btn');
 
 btnMenu.addEventListener('click', () => {
   btnMenu.classList.toggle('is-open');
   menuList.classList.toggle('is-open');
+
+  if (menuList.classList.contains('is-open')) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    btnMenu.classList.remove('is-open');
+    menuList.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  });
+});
+
+themeSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('blue-version');
 });
 
 const showSlides = (n) => {

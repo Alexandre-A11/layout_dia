@@ -73,8 +73,14 @@
   border-radius: 16px;
 
   box-shadow: 0 9 18 0 rgba(37, 41, 49, 0.03);
-
+  border: 2px solid transparent;
   margin-bottom: 24px;
+
+  transition: all $transition-time ease-in-out;
+
+  &:hover {
+    box-shadow: 0 16px 32px 0 rgba(37, 41, 49, 0.22);
+  }
 
   @include on-tablet {
     width: 264px;
@@ -106,6 +112,10 @@
       grid-row: 1;
       transform: translateY(139px);
     }
+
+    .blue-version &:hover {
+      box-shadow: 0 16px 32px 0 rgba(86, 204, 242, 0.22);
+    }
   }
 
   &--002 {
@@ -121,6 +131,10 @@
 
       transform: translateY(0);
     }
+
+    .blue-version &:hover {
+      box-shadow: 0 16px 32px 0 rgba(252, 201, 29, 0.22);
+    }
   }
 
   &--003 {
@@ -128,6 +142,10 @@
       grid-column: 7 / 10;
       grid-row: 2;
       transform: translateY(130px);
+    }
+
+    .blue-version &:hover {
+      box-shadow: 0 16px 32px 0 rgba(21, 216, 80, 0.22);
     }
   }
 
@@ -142,6 +160,10 @@
       grid-column: 10 / -1;
       grid-row: 2;
       transform: translateY(0);
+    }
+
+    .blue-version &:hover {
+      box-shadow: 0 16px 32px 0 rgba(243, 99, 99, 0.22);
     }
   }
 
@@ -162,6 +184,34 @@
     align-content: center;
 
     margin: 0 0 24px;
+
+    &--001 {
+      .blue-version & {
+        background-color: #effafe;
+        color: $color-vivid-sky-blue;
+      }
+    }
+
+    &--002 {
+      .blue-version & {
+        background-color: #fffae9;
+        color: $color-jonquil;
+      }
+    }
+
+    &--003 {
+      .blue-version & {
+        background-color: #e8fcee;
+        color: $color-malachite;
+      }
+    }
+
+    &--004 {
+      .blue-version & {
+        background-color: #fef0f0;
+        color: $color-bittersweet;
+      }
+    }
   }
 
   &__text {
@@ -207,6 +257,30 @@
     position: relative;
 
     transition: background-color $transition-time ease;
+
+    &--001 {
+      .blue-version & {
+        background-color: $color-vivid-sky-blue;
+      }
+    }
+
+    &--002 {
+      .blue-version & {
+        background-color: $color-jonquil;
+      }
+    }
+
+    &--003 {
+      .blue-version & {
+        background-color: $color-malachite;
+      }
+    }
+
+    &--004 {
+      .blue-version & {
+        background-color: $color-bittersweet;
+      }
+    }
 
     &::after {
       content: '';

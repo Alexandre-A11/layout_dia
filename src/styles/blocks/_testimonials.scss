@@ -103,6 +103,46 @@
 
     margin: 0 0 24px;
 
+    transition:
+      transform $transition-time ease-in-out,
+      box-shadow $transition-time ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 16px 32px 0 rgba(32, 96, 246, 0.22);
+    }
+
+    &--001 {
+      @include on-desktop-sm {
+        grid-column: 1 / 5;
+      }
+    }
+
+    &--002 {
+      @include on-desktop-sm {
+        grid-column: 5 / 9;
+      }
+      .testimonials__text {
+        margin: 0 0 32px;
+      }
+
+      .testimonials__location {
+        white-space: nowrap;
+      }
+    }
+
+    .blue-version &--001:hover {
+      box-shadow: 0 16px 32px 0 rgba(86, 204, 242, 0.22);
+    }
+
+    .blue-version &--002:hover {
+      box-shadow: 0 16px 32px 0 rgba(252, 195, 4, 0.22);
+    }
+
+    .blue-version &--003:hover {
+      box-shadow: 0 16px 32px 0 rgba(242, 86, 86, 0.22);
+    }
+
     @include on-tablet {
       width: 558px;
       height: 478px;
@@ -124,24 +164,6 @@
       height: 494px;
 
       padding-inline: 56px;
-    }
-
-    &--001 {
-      @include on-desktop-sm {
-        grid-column: 1 / 5;
-      }
-    }
-    &--002 {
-      @include on-desktop-sm {
-        grid-column: 5 / 9;
-      }
-      .testimonials__text {
-        margin: 0 0 32px;
-      }
-
-      .testimonials__location {
-        white-space: nowrap;
-      }
     }
 
     &:last-child {
@@ -169,6 +191,21 @@
     @include on-desktop {
       width: 250px;
       height: 250px;
+    }
+
+    .blue-version &--001::before,
+    .blue-version &--001::after {
+      background-color: $color-vivid-sky-blue;
+    }
+
+    .blue-version &--002::before,
+    .blue-version &--002::after {
+      background-color: $color-jonquil;
+    }
+
+    .blue-version &--003::before,
+    .blue-version &--003::after {
+      background-color: $color-bittersweet;
     }
 
     &::before {
@@ -276,7 +313,24 @@
     width: 24px;
     height: 24px;
 
+    display: block;
+    mask-image: url('../images/icons/comma.png');
+    mask-size: contain;
+
+    background-color: $color-btn-primary;
     margin: 0 0 8px;
+
+    .blue-version &--001 {
+      background-color: $color-vivid-sky-blue;
+    }
+
+    .blue-version &--002 {
+      background-color: $color-jonquil;
+    }
+
+    .blue-version &--003 {
+      background-color: $color-bittersweet;
+    }
   }
 
   &__name {

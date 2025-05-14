@@ -43,6 +43,11 @@
 
   margin: 0 0 56px;
 
+  transition: transform $transition-time ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
   &__image {
     width: 166px;
     height: 166px;

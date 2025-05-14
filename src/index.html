@@ -41,10 +41,11 @@
     <!-- #region Header -->
     <header class="header">
       <a
-        href="#"
+        href="#home"
         class="header__logo"
       ></a>
 
+      <button class="header__theme-btn"></button>
       <!-- #region Nav -->
       <nav class="nav">
         <a
@@ -55,7 +56,7 @@
         <ul class="nav__menu-list">
           <li class="nav__menu-item">
             <a
-              href="#"
+              href="#about-us"
               class="nav__menu-link"
             >
               About us
@@ -64,7 +65,7 @@
 
           <li class="nav__menu-item">
             <a
-              href="#"
+              href="#services"
               class="nav__menu-link"
             >
               Services
@@ -73,7 +74,7 @@
 
           <li class="nav__menu-item">
             <a
-              href="#"
+              href="#testimonials"
               class="nav__menu-link"
             >
               Testimonials
@@ -82,7 +83,7 @@
 
           <li class="nav__menu-item">
             <a
-              href="#"
+              href="#contact-us"
               class="nav__menu-link"
             >
               Contact us
@@ -93,7 +94,7 @@
       <!-- #endregion -->
 
       <a
-        href="#"
+        href="#contact-us"
         class="header__hire-us"
       >
         Hire us
@@ -102,7 +103,10 @@
     <!--#endregion  -->
 
     <!-- #region Home -->
-    <section class="home">
+    <section
+      class="home"
+      id="home"
+    >
       <div class="home__main">
         <h1 class="home__title">Strategic Agency</h1>
 
@@ -112,7 +116,7 @@
         </p>
 
         <a
-          href="#"
+          href="#learn-more"
           class="home__btn"
         >
           Learn more
@@ -186,7 +190,10 @@
     <!--#endregion  -->
 
     <!-- #region Welcome -->
-    <section class="welcome">
+    <section
+      class="welcome"
+      id="about-us"
+    >
       <h2 class="welcome__title">Who we are</h2>
 
       <p class="welcome__text">
@@ -199,7 +206,10 @@
     <!-- #endregion -->
 
     <!-- #region What we do -->
-    <section class="what-we-do">
+    <section
+      class="what-we-do"
+      id="learn-more"
+    >
       <h2 class="what-we-do__title">Our expertise</h2>
 
       <div class="what-we-do__items">
@@ -254,7 +264,10 @@
     <!-- #endregion -->
 
     <!-- #region Process -->
-    <section class="process">
+    <section
+      class="process"
+      id="services"
+    >
       <div class="process__main">
         <h6 class="process__place">Services</h6>
 
@@ -270,9 +283,9 @@
       </div>
 
       <div class="card card--001">
-        <h6 class="card__number">001</h6>
+        <h6 class="card__number card__number--001">001</h6>
 
-        <p class="card__text">
+        <p class="card__text card__text--001">
           Brand Development
           <br />
           Copywriting
@@ -283,17 +296,17 @@
         </p>
 
         <a
-          href="#"
-          class="card__btn"
+          href="#learn-more"
+          class="card__btn card__btn--001"
         >
           <span class="card__btn-text">Learn more</span>
         </a>
       </div>
 
       <div class="card card--002">
-        <h6 class="card__number">002</h6>
+        <h6 class="card__number card__number--002">002</h6>
 
-        <p class="card__text">
+        <p class="card__text card__text--002">
           Content Production
           <br />
           Graphic Design
@@ -304,17 +317,17 @@
         </p>
 
         <a
-          href="#"
-          class="card__btn"
+          href="#learn-more"
+          class="card__btn card__btn--002"
         >
           <span class="card__btn-text">Learn more</span>
         </a>
       </div>
 
       <div class="card card--003">
-        <h6 class="card__number">003</h6>
+        <h6 class="card__number card__number--003">003</h6>
 
-        <p class="card__text">
+        <p class="card__text card__text--003">
           Marketing Strategy
           <br />
           Email Marketing
@@ -325,17 +338,17 @@
         </p>
 
         <a
-          href="#"
-          class="card__btn"
+          href="#learn-more"
+          class="card__btn card__btn--003"
         >
           <span class="card__btn-text">Learn more</span>
         </a>
       </div>
 
       <div class="card card--004">
-        <h6 class="card__number">004</h6>
+        <h6 class="card__number card__number--004">004</h6>
 
-        <p class="card__text">
+        <p class="card__text card__text--004">
           Digital Communications
           <br />
           Influencer Marketing
@@ -346,8 +359,8 @@
         </p>
 
         <a
-          href="#"
-          class="card__btn"
+          href="#learn-more"
+          class="card__btn card__btn--004"
         >
           <span class="card__btn-text">Learn more</span>
         </a>
@@ -356,7 +369,10 @@
     <!-- #endregion -->
 
     <!-- #region Testimonials -->
-    <section class="testimonials">
+    <section
+      class="testimonials"
+      id="testimonials"
+    >
       <h6 class="testimonials__place">Testimonials</h6>
 
       <h2 class="testimonials__title">
@@ -367,14 +383,12 @@
 
       <div class="testimonials__cards">
         <div class="testimonials__card testimonials__card--001">
-          <div class="testimonials__photo-container">
+          <div
+            class="testimonials__photo-container testimonials__photo-container--001"
+          >
             <div class="testimonials__photo testimonials__photo--001"></div>
           </div>
-          <img
-            src="./images/icons/comma.png"
-            alt="Comma"
-            class="testimonials__comma"
-          />
+          <div class="testimonials__comma testimonials__comma--001"></div>
 
           <p class="testimonials__text">
             AIR’s ideas are refreshing and out of the box. Authentic team that
@@ -387,14 +401,12 @@
         </div>
 
         <div class="testimonials__card testimonials__card--002">
-          <div class="testimonials__photo-container">
+          <div
+            class="testimonials__photo-container testimonials__photo-container--002"
+          >
             <div class="testimonials__photo testimonials__photo--002"></div>
           </div>
-          <img
-            src="./images/icons/comma.png"
-            alt="Comma"
-            class="testimonials__comma"
-          />
+          <div class="testimonials__comma testimonials__comma--002"></div>
 
           <p class="testimonials__text">
             AIR is an exceptional agency that leads with creative talent,
@@ -407,14 +419,12 @@
         </div>
 
         <div class="testimonials__card testimonials__card--003">
-          <div class="testimonials__photo-container">
+          <div
+            class="testimonials__photo-container testimonials__photo-container--003"
+          >
             <div class="testimonials__photo testimonials__photo--003"></div>
           </div>
-          <img
-            src="./images/icons/comma.png"
-            alt="Comma"
-            class="testimonials__comma"
-          />
+          <div class="testimonials__comma testimonials__comma--003"></div>
 
           <p class="testimonials__text">
             AIR raises the agency bar to stratospheric heights on both creative
@@ -439,12 +449,153 @@
       </p>
 
       <a
-        href="#"
+        href="#contact-us"
         class="cta__btn"
       >
         Apply
       </a>
     </section>
+    <!-- #endregion -->
+
+    <!-- #region Footer -->
+    <footer
+      class="footer"
+      id="contact-us"
+    >
+      <div class="footer__container footer__container--form">
+        <h2 class="footer__title">Send us a message</h2>
+
+        <form
+          action="#"
+          method="post"
+          onsubmit="this.reset(); return false;"
+          class="footer__form"
+        >
+          <input
+            type="email"
+            name="email"
+            class="footer__input footer__input--email"
+            placeholder="email@example.com"
+            required
+          />
+
+          <input
+            type="text"
+            name="name"
+            class="footer__input footer__input--name"
+            maxlength="36"
+            placeholder="Your name"
+            required
+          />
+
+          <!-- <div class="footer__container"> -->
+          <textarea
+            name="message"
+            class="footer__textarea"
+            placeholder="Your message"
+            maxlength="80"
+            required
+          ></textarea>
+
+          <!-- <label class="footer__placeholder">Your Message</label> -->
+          <!-- </div> -->
+
+          <button
+            type="submit"
+            class="footer__submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+
+      <div class="footer__container footer__container--contact-us">
+        <h2 class="footer__title">Contact us</h2>
+
+        <h6 class="footer__invite">Call us</h6>
+
+        <a
+          href="tel:654 321 987"
+          class="footer__contact footer__contact--tel"
+        >
+          654 321 987
+        </a>
+
+        <h6 class="footer__invite">Visit us</h6>
+
+        <a
+          href="https://maps.app.goo.gl/MkfkE3Wk49fME4MB6"
+          target="_blank"
+          class="footer__contact footer__contact--address"
+        >
+          2905 West Drive, Buffalo Grove
+        </a>
+
+        <h6 class="footer__invite">our socials</h6>
+
+        <div class="footer__container footer__container--social-media">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="footer__social-media footer__social-media--facebook"
+          ></a>
+          <a
+            href="https://www.x.com"
+            target="_blank"
+            class="footer__social-media footer__social-media--twitter"
+          ></a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="footer__social-media footer__social-media--instagram"
+          ></a>
+        </div>
+      </div>
+
+      <div class="footer__container footer__container--menu">
+        <a
+          href="#home"
+          class="footer__logo"
+        ></a>
+
+        <nav class="footer__nav">
+          <a
+            href="#about-us"
+            class="footer__link"
+          >
+            About us
+          </a>
+
+          <a
+            href="#home"
+            class="footer__link"
+          >
+            Home
+          </a>
+
+          <a
+            href="#learn-more"
+            class="footer__link"
+          >
+            Work
+          </a>
+
+          <a
+            href="#services"
+            class="footer__link"
+          >
+            Services
+          </a>
+
+          <a
+            href="#contact-us"
+            class="footer__link"
+          >
+            Contact us
+          </a>
+        </nav>
+      </div>
+    </footer>
     <!-- #endregion -->
   </body>
 </html>

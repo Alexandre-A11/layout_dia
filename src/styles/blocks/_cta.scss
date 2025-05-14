@@ -11,6 +11,10 @@
     background-image: url('../images/Shapes.png');
     background-size: 134%;
     background-position: center;
+
+    .blue-version & {
+      background-image: url('../images/Shapes-colored.png');
+    }
   }
 
   @include on-desktop-sm {
